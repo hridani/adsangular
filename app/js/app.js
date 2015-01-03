@@ -1,4 +1,4 @@
-var adsProject = angular.module('adsProject', ['ngRoute'])
+var adsProject = angular.module('adsProject', ['ngRoute','ui.bootstrap'])
         .config(function ($routeProvider) {
             $routeProvider.when('/register', {
                 templateUrl: 'templates/register.html',

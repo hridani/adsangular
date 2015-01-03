@@ -33,6 +33,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="col-md-3">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -53,6 +54,16 @@
                 </div>
             </div>
         </div>
+
+
+    </div>
+    <div class="row" id='page' ng-controller="PaginationCtrl">
+        <div class="col-md-9">
+
+        <div class="pager" data-pagination="" data-num-pages="numPages()"
+             data-current-page="currentPage" data-max-size="maxSize"
+             data-boundary-links="true"></div>
+            </div>
     </div>
 
 </div>
