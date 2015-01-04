@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="pagination">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/MainController.js" afterPath="$PROJECT_DIR$/app/js/controllers/MainController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/PagerController.js" afterPath="$PROJECT_DIR$/app/js/controllers/PagerController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/all-ads.html" afterPath="$PROJECT_DIR$/app/templates/all-ads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/mainPage.js" afterPath="$PROJECT_DIR$/app/js/services/mainPage.js" />
+    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="adsangular.iws" />
@@ -393,7 +388,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420326683558</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add PagerController">
+      <created>1420372093238</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1420372093238</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -438,7 +439,8 @@
     </option>
     <MESSAGE value="ads:title, text, picture, data + categories and towns" />
     <MESSAGE value="pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination" />
+    <MESSAGE value="add PagerController" />
+    <option name="LAST_COMMIT_MESSAGE" value="add PagerController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
