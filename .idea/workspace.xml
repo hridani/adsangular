@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="add PagerController">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/controllers/CategoriesAndTownsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/PagerController.js" afterPath="$PROJECT_DIR$/app/js/controllers/PagerController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/all-ads.html" afterPath="$PROJECT_DIR$/app/templates/all-ads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="adsangular.iws" />
@@ -427,12 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1420372145504</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add PagerController&#10;add CategoriesAndTownsCtrl">
+      <created>1420383069466</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1420383069466</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="1382" height="738" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -473,7 +475,8 @@
     <MESSAGE value="ads:title, text, picture, data + categories and towns" />
     <MESSAGE value="pagination" />
     <MESSAGE value="add PagerController" />
-    <option name="LAST_COMMIT_MESSAGE" value="add PagerController" />
+    <MESSAGE value="add PagerController&#10;add CategoriesAndTownsCtrl" />
+    <option name="LAST_COMMIT_MESSAGE" value="add PagerController&#10;add CategoriesAndTownsCtrl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
