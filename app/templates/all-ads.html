@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="PaginationCtrl">
     <div class="row">
         <div class="col-md-9">
             <ul id="ul">
@@ -34,7 +34,7 @@
             </ul>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3" >
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Categories</h3>
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" >
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Towns</h3>
@@ -57,10 +57,10 @@
 
 
     </div>
-    <div class="row" id='page' ng-controller="PaginationCtrl">
+    <div class="row" id='page' >
         <div class="col-md-9">
 
-        <div class="pager" data-pagination="" data-num-pages="numPages()"
+        <div class="pager" data-pagination="" data-num-pages="numPages"
              data-current-page="currentPage" data-max-size="maxSize"
              data-boundary-links="true"></div>
             </div>

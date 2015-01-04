@@ -10,7 +10,7 @@ var adsProject = angular.module('adsProject', ['ngRoute','ui.bootstrap'])
         });
             $routeProvider.when('/ads', {
                 templateUrl: 'templates/all-ads.html',
-                controler: 'AdsController'
+                controler: 'PaginationCtrl'
             });
         $routeProvider.otherwise({redirectTo: '/ads'});
         });
