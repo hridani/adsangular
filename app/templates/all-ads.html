@@ -34,36 +34,48 @@
             </ul>
         </div>
 
-        <div class="col-md-3" >
+        <div class="col-md-3" ng-controller="CategoriesAndTownsCtrl">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Categories</h3>
                 </div>
-                <div class="panel-body" ng-repeat="category in categories">
-                    {{category.name}}
+                <div class="panel-body" class="bs-component">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="category in categories"
+                           data-id="{{category.id}}" ng-click="categoryClicked($event.target)">
+                            {{category.name}}
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="col-md-3" >
+        <div class="col-md-3" ng-controller="CategoriesAndTownsCtrl" >
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Towns</h3>
                 </div>
-                <div class="panel-body" ng-repeat="town in towns">
-                    {{town.name}}
+                <div class="panel-body" class="bs-component">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="town in towns"
+                           data-id="{{town.id}}" ng-click="townClicked($event.target)">
+                            {{town.name}}
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
 
 
     </div>
-    <div class="row" id='page' >
+    <div class="row" id='page'>
         <div class="col-md-9">
 
-        <div class="pager" data-pagination="" data-num-pages="numPages"
-             data-current-page="currentPage" data-max-size="maxSize"
-             data-boundary-links="true"></div>
-            </div>
+            <div class="pager" data-pagination="" data-num-pages="numPages"
+                 data-current-page="currentPage" data-max-size="maxSize"
+                 data-boundary-links="true"></div>
+        </div>
     </div>
 
 </div>
