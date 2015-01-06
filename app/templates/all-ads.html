@@ -1,8 +1,9 @@
 <div class="jumbotron" ng-controller="PaginationCtrl">
+    <div>Categ {{adsParams.categoryId}}</div>
     <div class="row">
         <div class="col-md-9">
             <ul id="ul">
-                <li ng-repeat="ad in data.ads">
+                <li ng-repeat="ad in data.ads ">
                     <div class="container well">
                         <div class="row">
                             <div class="col-md-7">
@@ -18,7 +19,6 @@
                         </div>
 
                         <div class="row">
-
                             <div class="col-md-4">
                                 <img class="_fullHD" src="" ng-src="{{ad.imageDataUrl}}"/>
                             </div>
@@ -26,6 +26,23 @@
                             <div class="col-md-8">
                                 <div>
                                     {{ad.text}}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="panel-body">
+                                            <strong>Name:<br/>
+                                                Email:<br>
+                                                Phone:<br/>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="panel-body">
+                                            {{ad.ownerName}}<br/>
+                                            {{ad.ownerEmail}}<br/>
+                                            {{ad.ownerPhone}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,11 +63,10 @@
                             {{category.name}}
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
-        <div class="col-md-3" ng-controller="CategoriesAndTownsCtrl" >
+        <div class="col-md-3" ng-controller="CategoriesAndTownsCtrl">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Towns</h3>
@@ -62,20 +78,16 @@
                             {{town.name}}
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
-
-
     </div>
     <div class="row" id='page'>
         <div class="col-md-9">
-
             <div class="pager" data-pagination="" data-num-pages="numPages"
                  data-current-page="currentPage" data-max-size="maxSize"
-                 data-boundary-links="true"></div>
+                 data-boundary-links="true">
+            </div>
         </div>
     </div>
-
 </div>

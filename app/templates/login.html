@@ -1,25 +1,25 @@
 <div class="col-lg-6">
     <div class="well bs-component">
-        <form class="form-horizontal">
+        <form class="form-horizontal" name="loginForm">
             <fieldset>
                 <legend>Legend</legend>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" ng-model="login.username">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="login.password">
 
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button class="btn btn-default" ng-click="cancelUser()">Cancel</button>
+                        <button type="submit" class="btn btn-primary" ng-click="loginUser(login,loginForm)">Submit</button>
                     </div>
                 </div>
 
