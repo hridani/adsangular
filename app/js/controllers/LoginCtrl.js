@@ -1,10 +1,7 @@
-adsProject.controller('LoginCtrl',['$scope', function($scope, $location,mainData) {
+adsProject.controller('LoginCtrl',['$scope','userData', function($scope,userData) {
 
-   $scope.loginUser = function (login,loginForm) {
-        mainData.login(function (resp) {
-            $scope.access_token = resp;
-        },login.username,login.password);
-
+    $scope.login = function (user) {
+       userData.login(user);
     };
 
     $scope.cancelUser = function () {
