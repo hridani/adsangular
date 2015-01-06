@@ -1,4 +1,4 @@
-<div class="col-lg-6">
+<div class="container">
     <div class="well bs-component">
         <form class="form-horizontal">
             <fieldset>
@@ -6,13 +6,13 @@
                 <div class="form-group">
                     <label for="inputUsername" class="col-lg-2 control-label">Username</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                        <input type="text" class="form-control" id="inputUsername" placeholder="Username" ng-model="user.username">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
                     </div>
                 </div>
                 <div class="form-group">
@@ -24,42 +24,32 @@
                 <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Name</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="user.Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
                     </div>
                 </div>
-
-
-
                 <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <label for="inputPhone" class="col-lg-2 control-label">Phone</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                        <br>
-                        <select multiple="" class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-model="user.phone">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="inputTown" class="col-lg-2 control-label">Town</label>
+
+                    <select id="inputTown" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" ng-click="register(user)">Submit</button>
                     </div>
                 </div>
             </fieldset>

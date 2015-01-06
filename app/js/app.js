@@ -1,18 +1,21 @@
 'use strict';
-var adsProject = angular.module('adsProject', ['ngRoute', 'ui.bootstrap'])
-    .config(function ($routeProvider) {
+var adsProject = angular.module('adsProject', ['ngRoute','ngResource', 'ui.bootstrap']);
+adsProject.constant('baseServiceUrl','http://softuni-ads.azurewebsites.net/api/');
+adsProject.config(function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'templates/home.html',
             controller: 'HomeCtrl'
         });
-        $routeProvider.when('/register', {
-            templateUrl: 'templates/register.html',
-            controller: 'AdsController'
-        });
         $routeProvider.when('/login', {
             templateUrl: 'templates/login.html',
-            controller: 'LoginController'
+            controller: 'LoginCtrl'
         });
+
+        $routeProvider.when('/register', {
+            templateUrl: 'templates/register.html',
+            controller: 'RegisterCtrl'
+        });
+
         $routeProvider.when('/ads', {
             templateUrl: 'templates/all-ads.html',
             controller: 'PaginationCtrl'
