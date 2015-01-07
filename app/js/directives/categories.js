@@ -1,3 +1,8 @@
-/**
- * Created by user on 6.1.2015 г..
- */
+adsProject.directive('categories', function () {
+    return {
+        controller: 'CategoriesCtrl',
+        restrict: "E",
+        templateUrl: 'templates/categories.html',
+        replace: true
+    };
+});

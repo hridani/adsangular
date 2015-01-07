@@ -1,0 +1,15 @@
+<div id="categories">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Categories</h3>
+        </div>
+        <div class="panel-body" class="bs-component">
+            <div class="list-group">
+                <a href="#" class="list-group-item" ng-repeat="category in categories"
+                   ng-click="categoryClicked(category)">
+                    {{category.name}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

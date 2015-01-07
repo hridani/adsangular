@@ -1,10 +1,17 @@
-adsProject.controller('PublicAdsCtrl',['$scope','adsData', function ($scope,adsData) {
+adsProject.controller('PublicAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
     $scope.ready=false;
-    adsData.getPublicAds()
-        .$promise
-        .then(function(data){
-            $scope.adsData=data;
-            $scope.ready=true;
-        })
+    function loadPublicAds(filterParams) {
+        filterParams=filterParams || {};
+        adsData.getPublicAds(filterParams)
+            .$promise
+            .then(function (data) {
+                $scope.adsData = data;
+                $scope.ready = true;
+            });
+    }
+    loadPublicAds();
 
+    $scope.$on('categoryClicked',function(event,category){
+        loadPublicAds(filter.getFilterParams());
+    })
 }]);
