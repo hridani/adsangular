@@ -1,7 +1,8 @@
 <div id="piblic-ads">
+    <img src="/img/loading.gif" ng-hide="ready" alt="">
     <div class="jumbotron" >
-        <div>Categ {{adsParams.categoryId}}</div>
-        <div class="row">
+
+         <div class="row" ng-cloak>
             <div class="col-md-9">
                 <ul id="ul">
                     <li ng-repeat="ad in adsData.ads ">
