@@ -6,7 +6,7 @@
             <div class="panel-body" class="bs-component">
                 <div class="list-group">
                     <a href="#" class="list-group-item" ng-repeat="town in towns"
-                       data-id="{{town.id}}" ng-click="townClicked($event.target)">
+                       ng-click="townClicked(town)">
                         {{town.name}}
                     </a>
                 </div>

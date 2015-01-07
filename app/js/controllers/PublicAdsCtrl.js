@@ -1,5 +1,6 @@
 adsProject.controller('PublicAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
     $scope.ready=false;
+    loadPublicAds();
     function loadPublicAds(filterParams) {
         filterParams=filterParams || {};
         adsData.getPublicAds(filterParams)
@@ -9,9 +10,11 @@ adsProject.controller('PublicAdsCtrl',['$scope','adsData','filter',function ($sc
                 $scope.ready = true;
             });
     }
-    loadPublicAds();
 
     $scope.$on('categoryClicked',function(event,category){
+        loadPublicAds(filter.getFilterParams());
+    });
+    $scope.$on('townClicked',function(event,town){
         loadPublicAds(filter.getFilterParams());
     })
 }]);
