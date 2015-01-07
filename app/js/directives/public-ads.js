@@ -1,3 +1,8 @@
-/**
- * Created by user on 6.1.2015 г..
- */
+adsProject.directive('publicAds', function () {
+    return {
+        controller: 'PublicAdsCtrl',
+        restrict: "E",
+        templateUrl: 'templates/public-ads.html',
+        replace: true
+    };
+});
