@@ -1,7 +1,11 @@
-adsProject.controller('LoginCtrl',['$scope','userData', function($scope,userData) {
+adsProject.controller('LoginCtrl',['$scope','$location','userData', function($scope,$location,userData) {
 
     $scope.login = function (user) {
-       userData.login(user);
+       userData.login(user)
+           .$promise
+           .then(function(data){
+               $location.path('/')
+           })
     };
 
     $scope.cancelUser = function () {
