@@ -11,6 +11,7 @@
 }
 
 #page {
+    padding: 0px;
     text-align: center;
 }
 
@@ -21,7 +22,7 @@ h1, h3, h4 {
 #loading {
 
 }
-#piblic-ads{
+#public-ads{
     margin:0px;
     padding: 0px;
 }

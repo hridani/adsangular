@@ -17,12 +17,9 @@ adsProject.config(function ($routeProvider) {
         controller: 'RegisterCtrl'
     });
 
-    $routeProvider.when('/ads', {
-        templateUrl: 'templates/all-ads.html',
-        controller: 'PaginationCtrl'
-    });
-    $routeProvider.otherwise({redirectTo: '/ads'});
-    //web storage settings
+    $routeProvider.otherwise(
+        { redirectTo: '/' }
+    );
 
 });
 

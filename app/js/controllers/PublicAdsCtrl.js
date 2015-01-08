@@ -1,8 +1,8 @@
 adsProject.controller('PublicAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
-    $scope.totalPages = 45
+    $scope.totalPages = 0
         , $scope.currentPage = 1
         , $scope.numPerPage = 5
-        , $scope.maxSize = 3;
+        , $scope.maxSize = 5;
 
     $scope.$watch('currentPage + totalPages', function () {
         filter.filterByPage($scope.currentPage);

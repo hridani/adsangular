@@ -20,12 +20,8 @@ adsProject.factory('userData', ['$resource', 'baseServiceUrl', 'authentication',
     }
 
     function logoutUser() {
-        return $resource(baseServiceUrl + 'user/logout')
-            .save(user)
-            .$promise
-            .then(function (data) {
-                authentication.removeUser();
-            })
+        authentication.removeUser();
+
     }
 
     return {
