@@ -34,3 +34,49 @@ h1, h3, h4 {
     border-radius: 2px;
 }
 
+.user-area {
+
+    float: right;
+    margin: 5px 5px 0 0;
+    color: #d9edf7;
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.user-area span {
+    margin-right: 15px;
+}
+.link {
+    text-decoration: none;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #bce8f1;
+    text-decoration: none;
+}
+
+.image-box {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    border: 1px solid rgba(100, 155, 63, 0.51);
+    text-align: center;
+}
+
+.image-box:before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.image-box img, .image-box p {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}

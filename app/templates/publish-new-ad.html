@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="well bs-component" class="col-md-2">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Publish New Ad</legend>
+                <div class="form-group">
+                    <label for="title" class="col-lg-2 control-label">Title</label>
+
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="adData.title"
+                               required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="textAd" class="col-lg-2 control-label">Text</label>
+
+                    <div class="col-lg-10">
+                        <textarea class="form-control" rows="3" id="textAd" ng-model="adData.text" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="image" class="col-lg-2 control-label">Image</label>
+
+                    <div class="col-lg-10">
+                        <input type="file" class="form-control" id="image" onchange="angular.element(this).scope().fileSelected(this)"/>
+                    </div>
+                    <div class="image-box">
+                        <p>Image Preview</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="category" class="col-lg-2 control-label">Category</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="category" ng-model="adData.categoryId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="town" class="col-lg-2 control-label">Town</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="town" ng-model="adData.townId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default" ng-click="cancelPublish()">Cancel</button>
+                        <button type="submit" class="btn btn-primary" ng-click="publishAd(adData)">Publish</button>
+                    </div>
+                </div>
+
+
+            </fieldset>
+        </form>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: block;">&lt; &gt;</div>
+    </div>
+</div>

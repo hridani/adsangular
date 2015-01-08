@@ -11,7 +11,7 @@ adsProject.factory('authentication', function () {
         return angular.fromJson(localStorage.getItem(key));
     }
 
-    function getHeaders(argument) {
+    function getHeaders() {
         var headers = {};
         var userData = getUserData();
         if (userData) {
@@ -23,19 +23,22 @@ adsProject.factory('authentication', function () {
     function removeUser() {
         localStorage.removeItem(key);
     }
-function isAdmin(){
-    var isAdmin=getUserData().isAdmin;
-    return isAdmin;
-}
-    function isLoggedIn(){
+
+    function isAdmin() {
+        var isAdmin = getUserData().isAdmin;
+        return isAdmin;
+    }
+
+    function isLoggedIn() {
         return !!getUserData();
     }
+
     return {
         saveUser: saveUserData,
         getUser: getUserData,
         getHeaders: getHeaders,
         removeUser: removeUser,
-        isAdmin:isAdmin,
-        isLoggedIn:isLoggedIn
+        isAdmin: isAdmin,
+        isLoggedIn: isLoggedIn
     }
 });
