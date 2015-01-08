@@ -1,9 +1,10 @@
 <div id="piblic-ads">
     <img src="/img/loading.gif" ng-hide="ready" alt="">
-    <div class="jumbotron" >
 
-         <div class="row" ng-cloak>
-            <div class="col-md-11">
+    <div class="jumbotron">
+
+        <div class="row" ng-cloak>
+            <div class="col-md-12">
                 <ul id="ul">
                     <li ng-repeat="ad in adsData.ads ">
                         <div class="container well">
@@ -52,9 +53,27 @@
                     </li>
                 </ul>
             </div>
-
+            <div ng-if="adsData.ads.length==0" >
+                <h3>
+                    <strong> No ads found.</strong>
+                </h3>
+            </div>
 
         </div>
-
+        <div class="row" id='page'>
+            <div class="col-md-12">
+                <div class="pager" data-pagination="" data-num-pages="numPages"
+                     data-current-page="currentPage" data-max-size="maxSize"
+                     data-boundary-links="true">
+                    <!--<data-pagination  div class="pager"-->
+                    <!--page="StartPage"-->
+                    <!--ng-model="StartPage"-->
+                    <!--total-items="adsData.numItems"-->
+                    <!--ng-change="pageChanged()"-->
+                    <!--item-per-page="pageSize">-->
+                    <!--</data-pagination>-->
+                </div>
+            </div>
+        </div>
     </div>
 </div>

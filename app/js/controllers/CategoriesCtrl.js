@@ -7,6 +7,7 @@ adsProject.controller('CategoriesCtrl', ['$scope','$rootScope','categoriesData',
         });
 
     $scope.categoryClicked = function categoryClicked(category) {
+        $scope.selectedCategoryId = category;
         filter.filterByCategory(category);
         $rootScope.$broadcast('categoryClicked',category);
     }

@@ -1,21 +1,24 @@
 adsProject.factory('filter', function () {
-    var filterParams = {};
+    var params = {};
 
     function filterByCategory(category) {
-        filterParams.categoryId = category.id;
+        params.categoryId = category
     }
 
     function filterByTown(town) {
-        filterParams.townId = town.id;
+        params.townId = town;
     }
 
-    function getFilterParams() {
-        return filterParams;
+    function getParams() {
+        return params;
     }
-
+    function setPageParams(pageParams) {
+        return params;
+    }
     return {
         filterByCategory: filterByCategory,
         filterByTown: filterByTown,
-        getFilterParams: getFilterParams
+        getParams: getParams,
+        setPageParams:setPageParams
     }
 });

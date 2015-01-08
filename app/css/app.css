@@ -1,17 +1,35 @@
-#ul{
+#ul {
     list-style: none;
+    margin:10px 20px;
+   padding:0px;
 }
-._fullHD{
-    width:100%;
+
+._fullHD {
+    width: 100%;
     height: 100%;
     border-radius: 5px;
 }
-#page{
+
+#page {
     text-align: center;
 }
-h1,h3,h4{
+
+h1, h3, h4 {
     text-align: center;
 }
-#loading{
+
+#loading {
 
 }
+#piblic-ads{
+    margin:0px;
+    padding: 0px;
+}
+#categories li.selected, #towns li.selected {
+    margin: 0px;
+    background-color: #d9edf7;
+    color: #3a87ad;
+    border: 1px solid #bce8f1;
+    border-radius: 2px;
+}
+

@@ -1,15 +1,21 @@
-   <div id="towns">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">Towns</h3>
-            </div>
-            <div class="panel-body" class="bs-component">
-                <div class="list-group">
-                    <a href="#" class="list-group-item" ng-repeat="town in towns"
-                       ng-click="townClicked(town)">
-                        {{town.name}}
-                    </a>
-                </div>
-            </div>
+<div id="towns">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Towns</h3>
         </div>
+        <ul class="panel-body" class="bs-component">
+            <div class="list-group">
+                <li class="list-group-item"
+                    ng-class="{'selected' : selectedTownId == null}"
+                    ng-click="categoryClicked(null)">
+                    All
+                </li>
+                <li class="list-group-item" ng-repeat="town in towns"
+                    ng-click="townClicked(town.id)"
+                    ng-class="{'selected' : selectedTownId == town.id}">
+                    {{town.name}}
+                </li>
+            </div>
+        </ul>
     </div>
+</div>
