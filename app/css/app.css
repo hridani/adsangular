@@ -79,3 +79,10 @@ h1, h3, h4 {
     display: inline-block;
     vertical-align: middle;
 }
+.inactiv-btn{
+    margin-bottom:5px;
+    border-radius: 5px;
+}
+#ad-status{
+    text-align: center;
+}

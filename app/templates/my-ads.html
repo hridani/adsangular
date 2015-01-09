@@ -55,15 +55,24 @@
                             </div>
 
                             <div class="col-md-3">
-
-                                <div class="panel-body" >
-                                    <strong>Status:</strong><br/>
-                                    {{ad.status}}
-                                </div>
                                 <div class="panel-body">
-                                    <a href="#" class="btn btn-info">Deactivate</a>
-                                </div>
+                                    <strong id="ad-status" >Status:</strong><br/>
 
+                                    <div class="well well-sm">
+                                        {{ad.status}}
+                                    </div>
+
+                                    <div class="btn-group-vertical" ng-if="!isInactivAd(ad)">
+                                        <a href="#" class="btn btn-info" ng-click="deactivate(ad)">Deactivate</a>
+                                    </div>
+                                    <div class="btn-group-vertical" ng-if="isInactivAd(ad)">
+                                        <a href="#" class="btn btn-info inactiv-btn" ng-click="edit(ad)">Edit</a>
+                                        <a href="#" class="btn btn-info inactiv-btn" ng-click="publishAgain(ad)">Publish
+                                            Again</a>
+                                        <a href="#" class="btn btn-info inactiv-btn" ng-click="delete(ad)">Delete</a>
+
+                                    </div>
+                                </div>
                             </div>
 
 

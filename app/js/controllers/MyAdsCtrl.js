@@ -4,10 +4,10 @@ adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',functio
         , $scope.numPerPage = 5
         , $scope.maxSize = 5;
      var status=[
-        'Inactive',
-            'WaitingApproval',
-            'Published',
-            'Rejected'
+         'Inactive',
+         'WaitingApproval',
+         'Published',
+         'Rejected'
     ];
     $scope.statusAd=status;
     $scope.$watch('currentPage + totalPages', function () {
@@ -16,6 +16,26 @@ adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',functio
     });
     $scope.ready=false;
     filter.setPageParams($scope.currentPage,$scope.numPerPage = 5);
+
+    function getStatusAd(ad){
+        return ad.status;
+    }
+    function setStatusAd(ad,status){
+        ad.status=status;
+    }
+    $scope.isInactivAd=function (ad){
+        if(getStatusAd(ad)==status[0]){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
+    $scope.deactivate= function (ad) {
+        setStatusAd(ad,status[0]);
+        adsData.deactivateAd(ad.id);
+
+    };
 
     function loadMyAds(filterParams) {
         filterParams=filterParams || {};

@@ -11,7 +11,14 @@ adsProject.factory('adsData', ['$resource','$http', 'baseServiceUrl', 'authentic
     function editAd(adId, ad) {
         return resource.update({id: adId}, ad);
     }
-
+    function deactivateAd(adId) {
+        var userAuthentication = authentication.getHeaders().Authorization;
+        $http.defaults.headers.common['Authorization'] =userAuthentication;
+        var resourceDeactivate = $resource(baseServiceUrl + 'user/ads/deactivate/:adId', {adId:'@id'}, {
+            update: {method: 'PUT'}
+        });
+        return resourceDeactivate.update({id: adId});
+    }
     function getAdById() {
         return resource.get({id: adId});
     }
@@ -37,6 +44,7 @@ adsProject.factory('adsData', ['$resource','$http', 'baseServiceUrl', 'authentic
     return {
         getPublicAds: getPublicAds,
         create: createNewAd,
+        deactivateAd:deactivateAd,
         getMyAds:getMyAds,
         getById: getAdById,
         edit: editAd,
