@@ -1,5 +1,5 @@
-adsProject.controller('LoginCtrl',['$scope','$location','userData', function($scope,$location,userData) {
-
+adsProject.controller('LoginCtrl',['$scope','$route','$location','userData', function($scope,$route,$location,userData) {
+    console.log($route.controller);
     $scope.login = function (user) {
        userData.login(user)
            .$promise

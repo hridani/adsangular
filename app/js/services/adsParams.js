@@ -3,7 +3,6 @@
  */
 adsProject.factory('adsParams', function () {
     return {
-        categoryId:0,
-        townId:0
+        number:0
     };
 });

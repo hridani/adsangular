@@ -1,0 +1,11 @@
+<header>
+    <div class="bs-component">
+        <div class="navbar navbar-inverse" >
+            <h1>ADS - {{pageTitle}}- {{number}}
+            <span ng-if="isLoggedIn" class="user-area">
+                <span>{{username}}</span>
+                <a ng-click="logout()" class="link">Logout</a>
+            </span></h1>
+        </div>
+    </div>
+</header>
