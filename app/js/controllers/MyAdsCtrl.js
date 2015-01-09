@@ -1,4 +1,4 @@
-adsProject.controller('MyAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
+adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',function ($scope,$filter,adsData,filter) {
     $scope.totalPages = 0
         , $scope.currentPage = 1
         , $scope.numPerPage = 5
@@ -28,6 +28,9 @@ adsProject.controller('MyAdsCtrl',['$scope','adsData','filter',function ($scope,
                 $scope.ready = true;
             });
     }
-
+    $scope.statusAdsClicked = function (status) {
+        $scope.selectedStatus = status;
+        $scope.filterStatus=status;
+    }
 
 }]);
