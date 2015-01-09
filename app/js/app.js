@@ -22,6 +22,10 @@ adsProject.config(function ($routeProvider) {
         templateUrl: 'templates/publish-new-ad.html',
         controller: 'PublishNewAdCtrl'
     });
+    $routeProvider.when('/user/ads', {
+        templateUrl: 'templates/myAdsScreen.html',
+        controller: 'MyAdsCtrl'
+    });
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );

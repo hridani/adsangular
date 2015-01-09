@@ -1,4 +1,4 @@
-adsProject.controller('RegisterCtrl',['$scope','townsData','userData', function($scope,townsData,userData) {
+adsProject.controller('RegisterCtrl',['$scope','$location','townsData','userData', function($scope,$location,townsData,userData) {
    townsData.getTowns()
        .$promise
        .then(function (data){
@@ -8,6 +8,10 @@ adsProject.controller('RegisterCtrl',['$scope','townsData','userData', function(
     $scope.register=function(user){
         console.log(user);
         userData.register(user);
+    };
+
+    $scope.cancelRegister = function () {
+        $location.path('/')
     }
     }]);
 

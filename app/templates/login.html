@@ -1,4 +1,8 @@
-
+<div class="col-md-3" >
+    <div ><left-public-sidebar ng-if="!isLoggedIn" ></left-public-sidebar></div>
+    <div ><logged-in-sidebar ng-if="isLoggedIn" ></logged-in-sidebar></div>
+</div>
+<div class="col-md-7" >
     <div class="well bs-component">
         <form class="form-horizontal" name="loginForm">
             <fieldset>
@@ -27,3 +31,4 @@
             </fieldset>
         </form>
         <div id="source-button" class="btn btn-primary btn-xs" style="display: block;">&lt; &gt;</div></div>
+</div>

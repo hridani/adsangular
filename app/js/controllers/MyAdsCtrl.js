@@ -1,32 +1,33 @@
-adsProject.controller('PublicAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
+adsProject.controller('MyAdsCtrl',['$scope','adsData','filter',function ($scope,adsData,filter) {
     $scope.totalPages = 0
         , $scope.currentPage = 1
         , $scope.numPerPage = 5
         , $scope.maxSize = 5;
-
+     var status=[
+        'Inactive',
+            'WaitingApproval',
+            'Published',
+            'Rejected'
+    ];
+    $scope.statusAd=status;
     $scope.$watch('currentPage + totalPages', function () {
         filter.filterByPage($scope.currentPage);
-       loadPublicAds(filter.getParams());
+        loadMyAds(filter.getParams());
     });
     $scope.ready=false;
     filter.setPageParams($scope.currentPage,$scope.numPerPage = 5);
-    loadPublicAds();
-    function loadPublicAds(filterParams) {
+
+    function loadMyAds(filterParams) {
         filterParams=filterParams || {};
-        adsData.getPublicAds(filterParams)
+        adsData.getMyAds(filterParams)
             .$promise
             .then(function (data) {
-                $scope.adsData = data;
+                $scope.myAdsData = data;
                 $scope.totalPages = data.numItems;
                 $scope.numPages = data.numPages;
                 $scope.ready = true;
             });
     }
 
-    $scope.$on('categoryClicked',function(event,category){
-        loadPublicAds(filter.getParams());
-    });
-    $scope.$on('townClicked',function(event,town){
-        loadPublicAds(filter.getParams());
-    })
+
 }]);

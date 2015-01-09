@@ -9,6 +9,6 @@ adsProject.controller('LoginCtrl',['$scope','$route','$location','userData', fun
     };
 
     $scope.cancelUser = function () {
-
+        $location.path('/')
     }
 }]);

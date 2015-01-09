@@ -15,15 +15,11 @@
 
 <div id="wrapper">
     <div class="row">
-        <div class="col-md-3">
-            <div ng-include="'templates/partial/left-sidebar.html'"></div>
-        </div>
-        <div class="col-md-6" ng-view >
+
+        <div ng-view >
 
         </div>
-        <div class="col-md-3">
-            <div ng-include="'templates/partial/right-sidebar.html'"></div>
-        </div>
+
     </div>
 </div>
 
@@ -54,7 +50,8 @@
 <script type="text/javascript" src="js/controllers/TownsCtrl.js"></script>
 <script type="text/javascript" src="js/controllers/CategoriesCtrl.js"></script>
 <script type="text/javascript" src="js/controllers/LoggedInSidebarCtrl.js"></script>
-<script type="text/javascript" src="js/controllers/PublishNewAd.js"></script>
+<script type="text/javascript" src="js/controllers/PublishNewAdCtrl.js"></script>
+<script type="text/javascript" src="js/controllers/MyAdsCtrl.js"></script>
 
 
 <script type="text/javascript" src="js/services/data/townsData.js"></script>
@@ -62,7 +59,7 @@
 <script type="text/javascript" src="js/services/data/userData.js"></script>
 <script type="text/javascript" src="js/services/authentication.js"></script>
 <script type="text/javascript" src="js/services/adsParams.js"></script>
-<script type="text/javascript" src="js/services/adsData.js"></script>
+<script type="text/javascript" src="js/services/data/adsData.js"></script>
 <script type="text/javascript" src="js/services/filter.js"></script>
 <script type="text/javascript" src="js/services/notifyService.js"></script>
 
@@ -72,6 +69,8 @@
 <script type="text/javascript" src="js/directives/categories.js"></script>
 <script type="text/javascript" src="js/directives/loggedSidebar.js"></script>
 <script type="text/javascript" src="js/directives/publish-new-ad.js"></script>
+<script type="text/javascript" src="js/directives/my-ads.js"></script>
+
 
 
 

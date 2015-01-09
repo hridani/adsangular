@@ -1,0 +1,28 @@
+<div class="col-md-3" >
+    <div ><left-public-sidebar ng-if="!isLoggedIn" ></left-public-sidebar></div>
+    <div ><logged-in-sidebar ng-if="isLoggedIn" ></logged-in-sidebar></div>
+    <div id="statusAd">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">My Ads</h3>
+            </div>
+            <ul class="panel-body" class="bs-component">
+                <div class="list-group">
+                    <li class="list-group-item"
+                        ng-class="{'selected' : selectedStatus == null}"
+                        ng-click="statusAdsClicked(null)">
+                        All
+                    </li>
+                    <li class="list-group-item" ng-repeat="st in statusAd"
+                        ng-click="statusAdsClicked(st)"
+                        ng-class="{'selected' : selectedStatus == st}">
+                        {{st}}
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-7" >
+    <my-ads></my-ads>
+</div>

@@ -1,4 +1,8 @@
-
+<div class="col-md-3" >
+    <div ><left-public-sidebar ng-if="!isLoggedIn" ></left-public-sidebar></div>
+    <div ><logged-in-sidebar ng-if="isLoggedIn" ></logged-in-sidebar></div>
+</div>
+<div class="col-md-7" >
     <div class="well bs-component">
         <form class="form-horizontal">
             <fieldset>
@@ -41,17 +45,19 @@
                 </div>
                 <div class="form-group">
                     <label for="inputTown" class="col-lg-2 control-label">Town</label>
-
-                    <select id="inputTown" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
+                    <div class="col-lg-10">
+                    <select id="inputTown" class="form-control" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
                     </select>
+                        </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="btn btn-default">Cancel</button>
+                        <button class="btn btn-default" ng-click="cancelRegister()">Cancel</button>
                         <button type="submit" class="btn btn-primary" ng-click="register(user)">Submit</button>
                     </div>
                 </div>
             </fieldset>
         </form>
         <div id="source-button" class="btn btn-primary btn-xs" style="display: block;">&lt; &gt;</div></div>
+</div>

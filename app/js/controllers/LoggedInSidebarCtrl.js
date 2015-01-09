@@ -1,8 +1,8 @@
-adsProject.controller('LoggedInSidebarCtrl', ['$scope','$route', 'userData','notifyService', function ($scope,$route, userData,notifyService) {
+adsProject.controller('LoggedInSidebarCtrl', ['$scope','$location', 'userData','notifyService', function ($scope,$location, userData,notifyService) {
     $scope.logout = function () {
         userData.logout();
         notifyService.showInfo("Logout successful");
-        $route.reload();
+        $location.path('/');
 
     }
 }]);
