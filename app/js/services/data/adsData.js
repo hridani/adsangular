@@ -15,7 +15,7 @@ adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authenti
         }
 
         function editAd(adId, ad) {
-            return resource.update({id: adId}, ad);
+            return resourceUser.update({adId: adId}, ad);
         }
 
         function deactivateAd(adId) {
@@ -37,11 +37,11 @@ adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authenti
         }
 
         function createNewAd(ad) {
-           // var userAuthentication = authentication.getHeaders().Authorization;
-           // $http.defaults.headers.common['Authorization'] = userAuthentication;
-           // var resourceNewAd = $resource(baseServiceUrl + 'user/ads');
-           // return resourceNewAd.save(ad);
-            return resourceUser.save(ad);
+           var userAuthentication = authentication.getHeaders().Authorization;
+           $http.defaults.headers.common['Authorization'] = userAuthentication;
+           var resourceNewAd = $resource(baseServiceUrl + 'user/ads');
+           return resourceNewAd.save(ad);
+          //  return resourceUser.save(ad);
         }
 
         function getMyAds(params) {
