@@ -1,9 +1,14 @@
 adsProject.factory('adsData', ['$resource','$http', 'baseServiceUrl', 'authentication',
     function ($resource,$http, baseServiceUrl, authentication) {
     var resource = $resource(baseServiceUrl + 'ads:adId', {adId: '@id'}, {
-        update: {method: 'PUT'}
-    });
-
+            update: {method: 'PUT'}
+        });
+        var resourceUser = $resource(baseServiceUrl + 'user/ads/:adId', {adId: '@id'}, {
+            update: {method: 'PUT'}
+        });
+        var userAuthentication = authentication.getHeaders().Authorization;
+        $http.defaults.headers.common['Authorization'] =userAuthentication;
+        //'http://softuni-ads.azurewebsites.net/api/user/ads/:id',
     function getPublicAds(params) {
         return resource.get(params);
     }
@@ -19,8 +24,9 @@ adsProject.factory('adsData', ['$resource','$http', 'baseServiceUrl', 'authentic
         });
         return resourceDeactivate.update({id: adId});
     }
-    function getAdById() {
-        return resource.get({id: adId});
+    function getAdById(adId) {
+
+        return resourceUser.get({adId: adId});
     }
 
     function createNewAd(ad) {
@@ -37,8 +43,8 @@ adsProject.factory('adsData', ['$resource','$http', 'baseServiceUrl', 'authentic
             return resourceMyAds.get(params);
         }
 
-    function deleteAd(idId) {
-        return resource.delete({id: idId});
+    function deleteAd(adId) {
+        return resourceUser.delete({adId: adId});
     }
 
     return {

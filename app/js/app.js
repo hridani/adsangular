@@ -17,6 +17,10 @@ adsProject.config(function ($routeProvider) {
         templateUrl: 'templates/register.html',
         controller: 'RegisterCtrl'
     });
+    $routeProvider.when('/user/home', {
+        templateUrl: 'templates/publish-new-ad.html',
+        controller: 'PublishNewAdCtrl'
+    });
 
     $routeProvider.when('/user/ads/publish', {
         templateUrl: 'templates/publish-new-ad.html',
@@ -25,6 +29,10 @@ adsProject.config(function ($routeProvider) {
     $routeProvider.when('/user/ads', {
         templateUrl: 'templates/myAdsScreen.html',
         controller: 'MyAdsCtrl'
+    });
+    $routeProvider.when('/user/ads/edit/:id', {
+        templateUrl: 'templates/edit-ad.html',
+        controller: 'EditAdCtrl'
     });
     $routeProvider.otherwise(
         { redirectTo: '/' }

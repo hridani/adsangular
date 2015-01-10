@@ -1,4 +1,4 @@
-adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',function ($scope,$filter,adsData,filter) {
+adsProject.controller('MyAdsCtrl',['$scope','$routeParams','$location','$filter','adsData','filter',function ($scope,$routeParams,$location,$filter,adsData,filter) {
     $scope.totalPages = 0
         , $scope.currentPage = 1
         , $scope.numPerPage = 5
@@ -15,6 +15,7 @@ adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',functio
         loadMyAds(filter.getParams());
     });
     $scope.ready=false;
+
     filter.setPageParams($scope.currentPage,$scope.numPerPage = 5);
 
     function getStatusAd(ad){
@@ -36,6 +37,15 @@ adsProject.controller('MyAdsCtrl',['$scope','$filter','adsData','filter',functio
         adsData.deactivateAd(ad.id);
 
     };
+    $scope.delete= function (adId) {
+
+        adsData.delete(adId)
+            .$promise
+            .then(function(data){
+                loadMyAds();
+            })
+    };
+
 
     function loadMyAds(filterParams) {
         filterParams=filterParams || {};

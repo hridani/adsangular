@@ -1,10 +1,10 @@
-adsProject.controller('LoginCtrl',['$scope','$route','$location','userData', function($scope,$route,$location,userData) {
-    console.log($route.controller);
+adsProject.controller('LoginCtrl',['$scope','$location','userData', function($scope,$location,userData) {
+
     $scope.login = function (user) {
        userData.login(user)
            .$promise
            .then(function(data){
-               $location.path('/')
+               $location.path('/user/home')
            })
     };
 
