@@ -30,6 +30,10 @@ adsProject.config(function ($routeProvider) {
         templateUrl: 'templates/my-ads-screen.html',
         controller: 'MyAdsCtrl'
     });
+    $routeProvider.when('/user/profile', {
+        templateUrl: 'templates/edit-profile.html',
+        controller: 'EditUserCtrl'
+    });
     $routeProvider.when('/user/ads/edit/:id', {
         templateUrl: 'templates/edit-ad.html',
         controller: 'EditAdCtrl'
