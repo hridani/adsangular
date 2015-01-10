@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$filter', 'adsData', 'filter', function ($scope, $routeParams, $location, $filter, adsData, filter) {
     $scope.totalPages = 0
         , $scope.currentPage = 1
@@ -10,13 +11,13 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
         'Rejected'
     ];
     $scope.statusAd = status;
+    $scope.ready = false;
+    filter.setPageParams($scope.currentPage, $scope.numPerPage = 5);
+
     $scope.$watch('currentPage + totalPages', function () {
         filter.filterByPage($scope.currentPage);
         loadMyAds(filter.getParams());
     });
-    $scope.ready = false;
-
-    filter.setPageParams($scope.currentPage, $scope.numPerPage = 5);
 
     function getStatusAd(ad) {
         return ad.status;
@@ -34,6 +35,7 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
             return false;
         }
     };
+
     $scope.deactivate = function (ad) {
         setStatusAd(ad, status[0]);
         adsData.deactivateAd(ad.id)
@@ -44,6 +46,7 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
                 notifyService.showError("Cannot deactivate.", err);
             });
     };
+
     $scope.publishAgain = function (ad) {
         setStatusAd(ad, status[1]);
         adsData.publishAgain(ad.id)
@@ -56,7 +59,6 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
     };
 
     $scope.delete = function (adId) {
-
         adsData.delete(adId)
             .$promise
             .then(function (data) {
@@ -83,5 +85,4 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
         $scope.selectedStatus = status;
         $scope.filterStatus = status;
     }
-
 }]);

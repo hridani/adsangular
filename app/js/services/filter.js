@@ -1,3 +1,4 @@
+'use strict';
 adsProject.factory('filter', function () {
     var params = {};
 

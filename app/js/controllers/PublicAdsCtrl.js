@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('PublicAdsCtrl', ['$scope', 'notifyService', 'adsData', 'filter', function ($scope, notifyService, adsData, filter) {
     $scope.totalPages = 0
         , $scope.currentPage = 1
@@ -9,8 +10,11 @@ adsProject.controller('PublicAdsCtrl', ['$scope', 'notifyService', 'adsData', 'f
         loadPublicAds(filter.getParams());
     });
     $scope.ready = false;
+
     filter.setPageParams($scope.currentPage, $scope.numPerPage = 5);
+
     loadPublicAds();
+
     function loadPublicAds(filterParams) {
         filterParams = filterParams || {};
         adsData.getPublicAds(filterParams)
@@ -28,6 +32,7 @@ adsProject.controller('PublicAdsCtrl', ['$scope', 'notifyService', 'adsData', 'f
     $scope.$on('categoryClicked', function (event, category) {
         loadPublicAds(filter.getParams());
     });
+
     $scope.$on('townClicked', function (event, town) {
         loadPublicAds(filter.getParams());
     })

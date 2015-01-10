@@ -1,6 +1,5 @@
+'use strict';
 adsProject.factory('userData', ['$resource', '$http', 'baseServiceUrl', 'authentication', function ($resource, $http, baseServiceUrl, authentication) {
-
-
     function registerUser(user) {
         var resource = $resource(baseServiceUrl + 'user/register')
             .save(user);

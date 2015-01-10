@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('DeleteAdCtrl',['$scope','$routeParams','$location','notifyService','adsData','categoriesData','townsData',
     function ($scope, $routeParams, $location,notifyService, adsData,categoriesData,townsData) {
         adsData.getById($routeParams.id)
@@ -13,6 +14,7 @@ adsProject.controller('DeleteAdCtrl',['$scope','$routeParams','$location','notif
         $scope.cancelDelete = function () {
             $location.path('/user/ads');
         };
+
         $scope.delete = function (adId) {
             adsData.delete(adId)
                 .$promise

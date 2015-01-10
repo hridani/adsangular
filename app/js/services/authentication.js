@@ -1,10 +1,9 @@
+'use strict';
 adsProject.factory('authentication', function () {
     var key = 'user';
 
     function saveUserData(data) {
         localStorage.setItem(key, angular.toJson(data));
-        //   var key = 'user';
-        // localStorageServiceProvider.set(key, data);
     }
 
     function getUserData() {

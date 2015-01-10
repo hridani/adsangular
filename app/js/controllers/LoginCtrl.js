@@ -1,5 +1,6 @@
-adsProject.controller('LoginCtrl',['$scope','$location','notifyService','userData', function($scope,$location,notifyService,userData) {
-
+'use strict';
+adsProject.controller('LoginCtrl',['$scope','$rootScope','$location','notifyService','userData', function($scope,$rootScope,$location,notifyService,userData) {
+    $rootScope.pageTitle = "Login";
     $scope.login = function (user) {
        userData.login(user)
            .$promise

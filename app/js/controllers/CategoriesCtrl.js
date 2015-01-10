@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('CategoriesCtrl', ['$scope','$rootScope','categoriesData', 'filter', function ($scope,$rootScope ,categoriesData, filter) {
 
     categoriesData.getCategories()
@@ -11,5 +12,4 @@ adsProject.controller('CategoriesCtrl', ['$scope','$rootScope','categoriesData',
         filter.filterByCategory(category);
         $rootScope.$broadcast('categoryClicked',category);
     }
-
 }]);

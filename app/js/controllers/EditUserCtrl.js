@@ -12,9 +12,11 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 notifyService.showError("Invalid user", err);
             })
     }
+
     $scope.cancelUpdate = function () {
         $location.path('/user/ads');
     };
+
     $scope.updateUserProfile=function(user){
           userData.updateUser(user)
             .$promise
@@ -25,6 +27,7 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 notifyService.showError("Invalid user", err);
             })
     };
+
     $scope.changePassword=function(passData){
         userData.changePassword(passData)
             .$promise

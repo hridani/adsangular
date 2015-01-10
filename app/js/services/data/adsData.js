@@ -1,3 +1,4 @@
+'use strict';
 adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authentication',
     function ($resource, $http, baseServiceUrl, authentication) {
         var resource = $resource(baseServiceUrl + 'ads:adId', {adId: '@id'}, {
@@ -8,7 +9,6 @@ adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authenti
         });
         var userAuthentication = authentication.getHeaders().Authorization;
         $http.defaults.headers.common['Authorization'] = userAuthentication;
-
 
         function getPublicAds(params) {
             return resource.get(params);
@@ -26,12 +26,14 @@ adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authenti
             });
             return resourceDeactivate.update({id: adId});
         }
+
         function publishAgain(adId) {
             var resourcePublishAgain = $resource(baseServiceUrl + 'user/ads/publishagain/:adId', {adId: '@id'}, {
                 update: {method: 'PUT'}
             });
             return resourcePublishAgain.update({id: adId});
         }
+
         function getAdById(adId) {
             return resourceUser.get({adId: adId});
         }
@@ -65,5 +67,4 @@ adsProject.factory('adsData', ['$resource', '$http', 'baseServiceUrl', 'authenti
             edit: editAd,
             delete: deleteAd
         }
-
     }]);

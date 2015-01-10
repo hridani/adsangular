@@ -1,4 +1,6 @@
-adsProject.controller('RegisterCtrl', ['$scope', '$location', 'notifyService','townsData', 'userData', function ($scope, $location,notifyService, townsData, userData) {
+'use strict';
+adsProject.controller('RegisterCtrl', ['$scope','$rootScope', '$location', 'notifyService','townsData', 'userData', function ($scope,$rootScope, $location,notifyService, townsData, userData) {
+    $rootScope.pageTitle = "Register";
     townsData.getTowns()
         .$promise
         .then(function (data) {

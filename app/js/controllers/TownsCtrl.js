@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('TownsCtrl', ['$scope', '$rootScope', 'townsData', 'filter', function ($scope, $rootScope, townsData, filter) {
     townsData.getTowns()
         .$promise

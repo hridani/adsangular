@@ -1,3 +1,4 @@
+'use strict';
 adsProject.controller('PublishNewAdCtrl', ['$scope','$rootScope','$location','adsData','categoriesData','townsData','notifyService',
     function ($scope,$rootScope,$location,adsData,categoriesData,townsData,notifyService) {
 
