@@ -38,6 +38,11 @@ adsProject.config(function ($routeProvider) {
         templateUrl: 'templates/edit-ad.html',
         controller: 'EditAdCtrl'
     });
+    $routeProvider.when('/user/ads/delete/:id', {
+        templateUrl: 'templates/delete-ad.html',
+        controller: 'DeleteAdCtrl'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );
