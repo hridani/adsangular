@@ -27,7 +27,7 @@ adsProject.config(function ($routeProvider) {
         controller: 'PublishNewAdCtrl'
     });
     $routeProvider.when('/user/ads', {
-        templateUrl: 'templates/myAdsScreen.html',
+        templateUrl: 'templates/my-ads-screen.html',
         controller: 'MyAdsCtrl'
     });
     $routeProvider.when('/user/ads/edit/:id', {
