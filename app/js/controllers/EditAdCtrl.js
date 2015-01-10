@@ -10,5 +10,8 @@ adsProject.controller('EditAdCtrl',['$scope','$routeParams','$location','adsData
                 $scope.adData=null;
             });
 
+        $scope.cancelEdit = function () {
+            $location.path('/user/ads');
+        }
 
     }]);

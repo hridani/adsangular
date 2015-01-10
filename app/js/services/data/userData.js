@@ -1,18 +1,19 @@
 adsProject.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function ($resource, baseServiceUrl, authentication) {
     //  var resource=$resource(baseServiceUrl + paramDefaults,action);
     function registerUser(user) {
-        return $resource(baseServiceUrl + 'user/register')
-            .save(user)
-            .$promise
+        var resource = $resource(baseServiceUrl + 'user/register')
+            .save(user);
+        resource.$promise
             .then(function (data) {
                 authentication.saveUser(data);
-            })
+            });
+        return resource;
     }
 
     function loginUser(user) {
-        var resource=$resource(baseServiceUrl + 'user/login')
+        var resource = $resource(baseServiceUrl + 'user/login')
             .save(user);
-            resource.$promise
+        resource.$promise
             .then(function (data) {
                 authentication.saveUser(data);
             });

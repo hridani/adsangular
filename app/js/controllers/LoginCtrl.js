@@ -1,10 +1,12 @@
-adsProject.controller('LoginCtrl',['$scope','$location','userData', function($scope,$location,userData) {
+adsProject.controller('LoginCtrl',['$scope','$location','notifyService','userData', function($scope,$location,notifyService,userData) {
 
     $scope.login = function (user) {
        userData.login(user)
            .$promise
            .then(function(data){
-               $location.path('/user/home')
+               $location.path('/');
+           },function error(err) {
+               notifyService.showError("Invalid login", err);
            })
     };
 

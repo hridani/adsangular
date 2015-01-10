@@ -26,8 +26,8 @@ adsProject.controller('PublishNewAdCtrl', ['$scope','$rootScope','$location','ad
             .then(function(data){
                 notifyService.showInfo("Advertisement submitted for approval. Once approved, it will be published.");
                 $location.path("/user/ads");
-            },function(){
-                notifyService.showInfo("Publish ad failed");
+            },function(err){
+                notifyService.showError("Publish ad failed",err);
             }
          );
     };
