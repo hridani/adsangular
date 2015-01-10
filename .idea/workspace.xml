@@ -4,11 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/app/templates/partial/right-sidebar.html" description="&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;head lang=&quot;en&quot;&gt;&#10;    &lt;meta ..." line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="Publish again">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
+    <list default="true" id="7503b8ac-052d-4e37-bc23-b0f409c780e1" name="Default" comment="Edit user profile">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js" afterPath="$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/edit-profile.html" afterPath="$PROJECT_DIR$/app/templates/edit-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/data/userData.js" afterPath="$PROJECT_DIR$/app/js/services/data/userData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EditUserCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EditUserCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6909091" vertical-offset="58" max-vertical-offset="765">
-              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="748">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -54,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userData.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services/data/userData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.59008265" vertical-offset="510" max-vertical-offset="1190">
+              <caret line="51" column="25" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -87,8 +85,8 @@
       <file leaf-file-name="edit-profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/edit-profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="510" max-vertical-offset="2023">
-              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="65" />
+            <state vertical-scroll-proportion="-13.076923" vertical-offset="1275" max-vertical-offset="2023">
+              <caret line="95" column="129" selection-start-line="95" selection-start-column="129" selection-end-line="95" selection-end-column="129" />
               <folding />
             </state>
           </provider>
@@ -191,8 +189,8 @@
         <option value="$PROJECT_DIR$/app/templates/directives/user-in-sidebar.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/templates/edit-profile.html" />
-        <option value="$PROJECT_DIR$/app/js/services/data/userData.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/services/data/userData.js" />
       </list>
     </option>
   </component>
@@ -716,7 +714,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420894303070</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Edit user profile">
+      <created>1420901132747</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1420901132747</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -782,7 +786,8 @@
     <MESSAGE value="Edit ad" />
     <MESSAGE value="Some notification" />
     <MESSAGE value="Publish again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Publish again" />
+    <MESSAGE value="Edit user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit user profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1144,14 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/PublishNewAdCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services/data/adsData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1258">
@@ -1178,24 +1175,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/edit-profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="510" max-vertical-offset="2023">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="65" />
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="1275" max-vertical-offset="2023">
+          <caret line="95" column="129" selection-start-line="95" selection-start-column="129" selection-end-line="95" selection-end-column="129" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/data/userData.js">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/PublishNewAdCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/EditUserCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6909091" vertical-offset="58" max-vertical-offset="765">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="748">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/data/userData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59008265" vertical-offset="510" max-vertical-offset="1190">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="25" />
           <folding />
         </state>
       </provider>

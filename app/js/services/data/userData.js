@@ -1,5 +1,6 @@
 adsProject.factory('userData', ['$resource', '$http', 'baseServiceUrl', 'authentication', function ($resource, $http, baseServiceUrl, authentication) {
-    //  var resource=$resource(baseServiceUrl + paramDefaults,action);
+
+
     function registerUser(user) {
         var resource = $resource(baseServiceUrl + 'user/register')
             .save(user);
@@ -37,6 +38,15 @@ adsProject.factory('userData', ['$resource', '$http', 'baseServiceUrl', 'authent
 
         return resource.update(user);
     }
+    function changePassword(passwordData) {
+        var userAuthentication = authentication.getHeaders().Authorization;
+        $http.defaults.headers.common['Authorization'] = userAuthentication;
+
+        var resource = $resource(baseServiceUrl + 'user/changepassword', {adId: '@id'}, {
+            update: {method: 'PUT'}
+        });
+        return resource.update(passwordData);
+    }
 
     function logoutUser() {
         authentication.removeUser();
@@ -48,6 +58,7 @@ adsProject.factory('userData', ['$resource', '$http', 'baseServiceUrl', 'authent
         login: loginUser,
         logout: logoutUser,
         getUser: getUserProfile,
-        updateUser:updateUserProfile
+        updateUser:updateUserProfile,
+        changePassword:changePassword
     }
 }]);

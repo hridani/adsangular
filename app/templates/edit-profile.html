@@ -70,7 +70,7 @@
 
                             <div class="col-lg-8">
                                 <input type="password" class="form-control" id="oldPassword"
-                                       ng-model="user.password">
+                                       ng-model="passwordDate.oldPassword" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,7 +78,7 @@
 
                             <div class="col-lg-8">
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password"
-                                       ng-model="user.password">
+                                       ng-model="passwordDate.newPassword" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -86,14 +86,14 @@
 
                             <div class="col-lg-8">
                                 <input type="password" class="form-control" id="confirmPassword"
-                                       placeholder="Confirm Password" ng-model="user.confirmPassword">
+                                       placeholder="Confirm Password" ng-model="passwordDate.confirmPassword" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-2">
                                 <button class="btn btn-default" ng-click="cancelEdit()">Cancel</button>
-                                <button type="submit" class="btn btn-primary" ng-click="editAd(adData)">Publish</button>
+                                <button type="submit" class="btn btn-primary" ng-click="changePassword(password)">Change Password</button>
                             </div>
                         </div>
 

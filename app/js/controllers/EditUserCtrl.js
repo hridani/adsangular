@@ -25,14 +25,14 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 notifyService.showError("Invalid user", err);
             })
     };
-    $scope.changePassword=function(user){
-        userData.updateUser(user)
+    $scope.changePassword=function(passData){
+        userData.changePassword(passData)
             .$promise
             .then(function(data){
-                notifyService.showInfo("User profile successfully updated");
+                notifyService.showInfo("Change password successfully.");
 
             },function error(err) {
-                notifyService.showError("Invalid user", err);
+                notifyService.showError("Cannot change password", err);
             })
     }
 }]);
