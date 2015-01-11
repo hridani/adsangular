@@ -5,7 +5,7 @@ adsProject.controller('PublicAdsCtrl', ['$scope', 'notifyService', 'adsData', 'f
         , $scope.numPerPage = 5
         , $scope.maxSize = 5;
 
-    $scope.$watch('currentPage + totalPages', function () {
+    $scope.$watch('currentPage +totalPages', function () {
         filter.filterByPage($scope.currentPage);
         loadPublicAds(filter.getParams());
     });

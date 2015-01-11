@@ -20,7 +20,9 @@ adsProject.controller('PublishNewAdCtrl', ['$scope','$rootScope','$location','ad
             $(".image-box").html("<p>File type not supported!</p>");
         }
     };
-
+        $scope.cancelPublish= function () {
+            $location.path('/user/ads');
+        };
     $scope.publishAd = function(adData) {
         adsData.create(adData)
             .$promise

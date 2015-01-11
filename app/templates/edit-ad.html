@@ -7,7 +7,7 @@
 <div class="col-md-7">
 
     <div class="well bs-component">
-        <form class="form-horizontal">
+        <form class="form-horizontal" name="editMyAd">
             <fieldset>
                 <legend>Edit Ad</legend>
                 <div class="row">
@@ -30,11 +30,10 @@
                         </div>
                     </div>
                     <div class="col-md-4 ">
-                       <!-- <img class="image-box" src="" ng-src="{{adData.imageDataUrl}}"/>-->
-                        <div class="image-box">
-                            <img ng-show="isImageVisible" src="" ng-src="{{adData.imageDataUrl}}"/>
-                            <p ng-hide="isImageVisible">No Image</p>
+                       <div class="image-box" ng-show="isImageVisible" >
+                            <img class="_fullHD"  src="" ng-src="{{adData.imageDataUrl}}"/>
                         </div>
+                        <p ng-hide="isImageVisible">No Image</p>
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +42,7 @@
                             <label for="image" class="col-md-3 control-label">Image</label>
 
                             <div class="col-md-9">
-                                <!--<div browse preview=".image-box"/>-->
+
                                 <input type="file" class="form-control" id="image"
                                        onchange="angular.element(this).scope().fileSelected(this)"/>
                             </div>
@@ -71,8 +70,8 @@
                     </div>
                     <div class="form-group ">
                         <div class="col-md-4 ">
-                            <button class="btn btn-info btn-default" ng-click="changeImage()">Change</button>
-                            <button class="btn btn-info btn-default" ng-click="deleteImage()">Delete</button>
+                            <button class="btn btn-info btn-default"  ng-click="changeImage()">Change</button>
+                            <button class="btn btn-info btn-default" ng-disabled="adData.imageDataUrl==null" ng-click="deleteImage()">Delete</button>
                         </div>
                     </div>
                 </div>

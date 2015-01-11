@@ -1,4 +1,8 @@
 <!--<input id="base64-string" placeholder="Choose File" disabled="disabled"/>-->
+<input id="base64-string" placeholder="Choose File" disabled="disabled"/>
+<div class="btn form-btn">
+    <span>Browse ...</span>
+    <input type="file" class="upload-input" onchange="angular.element(this).scope().toDataUrl(this)"/>
+</div>
 
-    <input type="file" class="form-control" onchange="angular.element(this).scope().toDataUrl(this)"/>
 
