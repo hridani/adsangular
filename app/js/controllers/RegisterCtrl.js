@@ -14,7 +14,7 @@ adsProject.controller('RegisterCtrl', ['$scope','$rootScope', '$location', 'noti
                 notifyService.showInfo("User registered successfully.");
                 $location.path("/");
             },function(err){
-                notifyService.showError("User registration failed", err);
+                notifyService.showError("User registration failed", err.data);
             }
         );
     };

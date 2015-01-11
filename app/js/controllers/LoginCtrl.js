@@ -7,7 +7,7 @@ adsProject.controller('LoginCtrl',['$scope','$rootScope','$location','notifyServ
            .then(function(data){
                $location.path('/');
            },function error(err) {
-               notifyService.showError("Invalid login", err);
+               notifyService.showError("Invalid login", err.data);
            })
     };
 

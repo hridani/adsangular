@@ -25,7 +25,7 @@ adsProject.controller('PublicAdsCtrl', ['$scope', 'notifyService', 'adsData', 'f
                 $scope.numPages = data.numPages;
                 $scope.ready = true;
             }, function error(err) {
-                notifyService.showError("Cannot load ads", err);
+                notifyService.showError("Cannot load ads", err.data);
             });
     }
 

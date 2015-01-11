@@ -1,7 +1,7 @@
 #ul {
     list-style: none;
     margin:10px 20px;
-   padding:0px;
+    padding:0px;
 }
 
 ._fullHD {
@@ -10,9 +10,16 @@
     border-radius: 5px;
 }
 
-#page {
-    padding: 0px;
+.outerDiv{
+    width: 100%;
     text-align: center;
+}
+.innerDiv{
+    display: inline-block;
+}
+#positionRaging {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h1, h3, h4 {

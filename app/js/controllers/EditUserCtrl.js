@@ -9,7 +9,7 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 $scope.user=data;
 
             },function error(err) {
-                notifyService.showError("Invalid user", err);
+                notifyService.showError("Invalid user", err.data);
             })
     }
 
@@ -24,7 +24,7 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 notifyService.showInfo("User profile successfully updated");
 
             },function error(err) {
-                notifyService.showError("Invalid user", err);
+                notifyService.showError("Invalid user", err.data);
             })
     };
 
@@ -35,7 +35,7 @@ adsProject.controller('EditUserCtrl', ['$scope','$location', 'userData','townsDa
                 notifyService.showInfo("Change password successfully.");
 
             },function error(err) {
-                notifyService.showError("Cannot change password", err);
+                notifyService.showError("Cannot change password", err.data);
             })
     }
 }]);

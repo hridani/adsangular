@@ -23,7 +23,7 @@ adsProject.controller('DeleteAdCtrl',['$scope','$routeParams','$location','notif
                     $location.path('/user/ads');
 
                 }, function (err) {
-                    notifyService.showError("Cannot delete.", err);
+                    notifyService.showError("Cannot delete.", err.data);
                 });
         }
     }]);

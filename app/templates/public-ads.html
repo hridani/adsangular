@@ -1,5 +1,6 @@
-<div id="public-ads">
-    <img src="/img/loading.gif" ng-hide="ready" alt="">
+<div id="public-ads" class="outerDiv" >
+
+    <img class="innerDiv" src="/img/loading.gif" ng-hide="ready" alt="">
 
     <div class="jumbotron">
 
@@ -61,12 +62,10 @@
 
         </div>
         <div class="row" >
-            <div class="col-md-12"   >
-
-                <div class="pager"  id='page' data-pagination="" data-num-pages="numPages"
-                     data-current-page="currentPage" data-max-size="maxSize"
+            <div class="col-md-12 outerDiv" >
+                <div class="pager innerDiv" data-pagination="" data-num-pages="numPages"
+                     data-current-page="currentPage" data-max-size="maxSize"  data-ng-model="currentPage"
                      data-boundary-links="true">
-
                 </div>
             </div>
         </div>

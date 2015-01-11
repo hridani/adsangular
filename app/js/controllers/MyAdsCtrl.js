@@ -43,7 +43,7 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
             .then(function (data) {
                 $location.path('/user/ads');
             }, function (err) {
-                notifyService.showError("Cannot deactivate.", err);
+                notifyService.showError("Cannot deactivate.", err.data);
             });
     };
 
@@ -54,7 +54,7 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
             .then(function (data) {
                 $location.path('/user/ads');
             }, function (err) {
-                notifyService.showError("Cannot publish again.", err);
+                notifyService.showError("Cannot publish again.", err.data);
             });
     };
 
@@ -64,10 +64,9 @@ adsProject.controller('MyAdsCtrl', ['$scope', '$routeParams', '$location', '$fil
             .then(function (data) {
                 $location.path('/user/ads');
             }, function (err) {
-                notifyService.showError("Cannot delete.", err);
+                notifyService.showError("Cannot delete.", err.data);
             });
     };
-
 
     function loadMyAds(filterParams) {
         filterParams = filterParams || {};

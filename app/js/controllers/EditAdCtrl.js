@@ -49,7 +49,7 @@ adsProject.controller('EditAdCtrl', ['$scope', '$routeParams', '$location', 'not
                     notifyService.showInfo("Advertisement edited. Don't forget to submit it for publishing");
                     $location.path("/user/ads");
                 }, function (err) {
-                    notifyService.showError("Cannot edit ad.")
+                    notifyService.showError("Cannot edit ad.",err.data)
                 });
 
         };
